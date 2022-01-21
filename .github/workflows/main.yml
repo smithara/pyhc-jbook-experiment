@@ -17,18 +17,19 @@ jobs:
       - name: Provision conda env
         uses: conda-incubator/setup-miniconda@v2
         with:
-          mamba-version: "*"
-          channels: conda-forge
           activate-environment: pyhc
           environment-file: environment.yml
-          auto-activate-base: false
       - name: conda list
         run: |
           conda info
-          conda list
+          conda env list
+          conda list --name pyhc
       # Build Jupyter Book site
       - name: Run jupyter-book build
         run: |
+          conda activate pyhc
+          pwd
+          ls -la
           jupyter-book build .
       # Deploy online preview
       - name: Deploy to Netlify

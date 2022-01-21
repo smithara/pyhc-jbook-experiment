@@ -22,5 +22,5 @@ dependencies:
     - cdflib==0.3.*
     - hapiclient==0.2.*
     - pyspedas==1.2.*
-    - pytplot=1.7.*
+    - pytplot==1.7.*
     - spacepy==0.2.*

@@ -15,6 +15,7 @@ dependencies:
   - pandas
   - pip
   - plasmapy
+  - pre-commit
   - python
   - scipy
   - sunpy

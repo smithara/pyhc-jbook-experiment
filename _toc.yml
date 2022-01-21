@@ -1,0 +1,16 @@
+# Table of contents
+# Learn more at https://jupyterbook.org/customize/toc.html
+
+format: jb-book
+root: README
+parts:
+- caption: Core Package Demos
+  chapters:
+  - file: src/planet_locations
+  - file: src/units_demo
+  - file: src/pyspedas_demo
+  - file: src/coordinates_demo
+  - file: src/pytplot_demo
+- caption: Executable papers
+  chapters:
+  - file: src/PyHC_Science_Paper-AGU

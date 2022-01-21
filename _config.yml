@@ -1,0 +1,33 @@
+# Book settings
+# Learn more at https://jupyterbook.org/customize/config.html
+
+title: PyHC Gallery (demo)
+author: Python in Heliophysics Community
+logo: logo.png
+
+execute:
+  execute_notebooks: cache
+  run_in_temp: true
+  timeout: 120
+  allow_errors: true
+
+launch_buttons:
+  notebook_interface: jupyterlab
+  binderhub_url: "https://mybinder.org"
+  # jupyterhub_url: "https://ingeo.datatransport.org/v3/jupyter/"
+
+repository:
+  url: https://github.com/smithara/pyhc-jbook-experiment
+  branch: main
+
+html:
+  use_issues_button: true
+  use_repository_button: true
+
+parse:
+  myst_enable_extensions:
+    - dollarmath
+    - linkify
+    - substitution
+    - colon_fence
+    - deflist

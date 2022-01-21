@@ -17,8 +17,11 @@ jobs:
       - name: Provision conda env
         uses: conda-incubator/setup-miniconda@v2
         with:
+          mamba-version: "*"
+          channels: conda-forge
           activate-environment: pyhc
           environment-file: environment.yml
+          auto-activate-base: false
       - name: conda list
         run: |
           conda info

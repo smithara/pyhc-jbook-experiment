@@ -20,14 +20,15 @@ jobs:
           activate-environment: pyhc
           environment-file: environment.yml
       - name: conda list
+        shell: bash -l {0}
         run: |
           conda info
           conda env list
           conda list --name pyhc
       # Build Jupyter Book site
       - name: Run jupyter-book build
+        shell: bash -l {0}
         run: |
-          conda activate pyhc
           pwd
           ls -la
           jupyter-book build .

@@ -21,7 +21,7 @@ jobs:
         uses: conda-incubator/setup-miniconda@v2
         with:
           activate-environment: pyhc
-          environment-file: environment.yml
+          environment-file: environment-strict.yml
       - name: conda list
         run: |
           conda list

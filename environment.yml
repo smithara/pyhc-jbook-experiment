@@ -7,20 +7,24 @@ dependencies:
   - cartopy=0.20
   - gfortran=11.2  # needed for ffnet dependency of spacepy
   - jupyter-book=0.12
-  - jupyterlab=3.2
+  - jupyterlab=3
+  - jupyterlab-git
   - matplotlib=3.5
   - netcdf4=1.5
   - numpy=1.22
   - pandas=1.3
-  - pip=21.3
+  - pip
   - plasmapy=0.7
   - python=3.10
   - scipy=1.7
   - sunpy=3.1
+  - watermark
   - xarray=0.20
   - pip:
     - cdflib==0.3.*
     - hapiclient==0.2.*
+    - hapiplot==0.2.*
+    - kamodo==21.10.*
     - pyspedas==1.2.*
     - pytplot==1.7.*
     - spacepy==0.2.*

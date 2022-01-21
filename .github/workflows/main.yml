@@ -19,10 +19,14 @@ jobs:
         with:
           activate-environment: pyhc
           environment-file: environment.yml
+      - name: conda list
+        run: |
+          conda info
+          conda list
       # Build Jupyter Book site
       - name: Run jupyter-book build
         run: |
-          jupyter book build .
+          jupyter-book build .
       # Deploy online preview
       - name: Deploy to Netlify
         uses: nwtgck/actions-netlify@v1.2

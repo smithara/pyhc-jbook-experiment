@@ -25,6 +25,7 @@ dependencies:
     - hapiclient
     - hapiplot
     - kamodo
+    - pysat
     - pyspedas
     - pytplot
     - spacepy

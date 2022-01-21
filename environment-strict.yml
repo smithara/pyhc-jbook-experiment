@@ -1,6 +1,7 @@
 name: pyhc
 channels:
   - conda-forge
+  - defaults
 dependencies:
   - _libgcc_mutex=0.1=conda_forge
   - _openmp_mutex=4.5=1_gnu
@@ -365,12 +366,14 @@ dependencies:
     - kamodo==21.10.0
     - omegaconf==1.4.1
     - plotly==5.5.0
+    - portalocker==2.3.2
     - pyqt5==5.15.6
     - pyqt5-qt5==5.15.2
     - pyqt5-sip==12.9.0
     - pyqtgraph==0.12.2
     - pyqtwebengine==5.15.5
     - pyqtwebengine-qt5==5.15.2
+    - pysat==3.0.1
     - pyspedas==1.2.10
     - python-forge==18.6.0
     - pytplot==1.7.28
@@ -378,3 +381,4 @@ dependencies:
     - sympy==1.5.1
     - tenacity==8.0.1
     - werkzeug==2.0.2
+prefix: /home/ash/miniconda3/envs/pyhc

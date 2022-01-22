@@ -15,6 +15,7 @@ dependencies:
   - pandas
   - pip
   - plasmapy
+  - pre-commit
   - python
   - scipy
   - sunpy
@@ -25,6 +26,7 @@ dependencies:
     - hapiclient
     - hapiplot
     - kamodo
+    - pysat
     - pyspedas
     - pytplot
     - spacepy

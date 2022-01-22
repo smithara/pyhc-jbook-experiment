@@ -4,6 +4,9 @@
 format: jb-book
 root: README
 parts:
+- caption: Preamble
+  chapters:
+  - file: src/welcome
 - caption: Core Package Demos
   chapters:
   - file: src/planet_locations

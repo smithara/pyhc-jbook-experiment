@@ -5,8 +5,6 @@ on:
     branches: [ main ]
   pull_request:
     branches: [ main ]
-  schedule:
-    - cron: "00 02 * * 0"
 
   workflow_dispatch:
 
@@ -41,7 +39,7 @@ jobs:
           deploy-message: "Deploy from GitHub Actions"
           github-deployment-environment: staging
           github-deployment-description: "jbook built from environment-strict.yml"
-          alias: deploy-preview-${{ github.event.number }}
+          alias: preview-${{ github.event.number }}
           enable-pull-request-comment: true
           enable-commit-comment: true
           overwrites-pull-request-comment: true
@@ -77,12 +75,13 @@ jobs:
           uses: nwtgck/actions-netlify@v1.2
           with:
             publish-dir: './_build/html'
+            production-branch: main
             production-deploy: false
             github-token: ${{ secrets.GITHUB_TOKEN }}
             deploy-message: "Deploy from GitHub Actions - latest package versions"
             github-deployment-environment: latest-versions
             github-deployment-description: "jbook built from environment-latest.yml"
-            alias: deploy-preview-${{ github.event.number }}-latest-versions
+            alias: preview-${{ github.event.number }}-latest-versions
             enable-pull-request-comment: false
             enable-commit-comment: true
             overwrites-pull-request-comment: false

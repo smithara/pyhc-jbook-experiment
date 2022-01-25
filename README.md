@@ -10,18 +10,21 @@ Content is copied from:
 
 Binder link: https://mybinder.org/v2/gh/smithara/pyhc-jbook-experiment/main
 
-Local setup with conda/mamba:  
+Local setup with conda/mamba in Linux:  
 ```
-mamba env create --file environment.yml
+conda env create --file environment.yml --name pyhc
 conda activate pyhc
+pre-commit install
 jupyter lab
 ```
 
-Environment includes [jupyterlab-git](https://github.com/jupyterlab/jupyterlab-git) extension for nice git usage with notebooks
+Compile the book with: `jupyter-book build .`
 
-Three environments for different use cases (same packages configured, but different versions):
+The environment includes the [jupyterlab-git](https://github.com/jupyterlab/jupyterlab-git) extension for nice git usage with notebooks. It also includes [pre-commit](https://pre-commit.com/) to use [nbstripout](https://github.com/kynan/nbstripout) to help prevent committing notebook output cells to the repository. pre-commit will run automatically when you `git commit`, scrubbing the notebooks (the first commit will fail, having just modified the notebooks - just `git add` and `git commit` a second time for it to succeed).
 
-- `environment.yml`: loose definition (major+minor versions) for some wiggle room to include bugfixes
-- `environment-strict.yml`: specific versions used for better reproducability  
-  (`conda env export --name pyhc --file environment-strict.yml`)
+There are three environments for different use cases (same packages configured, but different versions):
+
+- `environment-near.yml`: loose definition (major+minor versions) with only direct dependencies - used as a starting point to generate `environment.yml`
+- `environment.yml`: full specification for better reproducability  
+  (`conda env export --name pyhc --file environment.yml`)
 - `environment-latest.yml` builds environment with latest versions to test against before manually updating `environment.yml`

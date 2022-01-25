@@ -34,9 +34,9 @@ jobs:
         uses: nwtgck/actions-netlify@v1.2
         with:
           publish-dir: './_build/html'
-          production-branch: main
+          production-deploy: false
           github-token: ${{ secrets.GITHUB_TOKEN }}
-          deploy-message: "Deploy from GitHub Actions"
+          deploy-message: "Deploy from GitHub Actions - staging"
           github-deployment-environment: staging
           github-deployment-description: "jbook built from environment-strict.yml"
           alias: preview-${{ github.event.number }}
@@ -47,6 +47,10 @@ jobs:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
         timeout-minutes: 1
+      - name: Test notebooks (nbmake)
+        run: |
+          pip install nbmake
+          pytest --nbmake
   build-book-latest-versions:
       runs-on: ubuntu-latest
       defaults:
@@ -54,7 +58,7 @@ jobs:
           shell: bash -l {0}
       steps:
         - uses: actions/checkout@v2
-        # Create pyhc conda environment
+        # Create pyhc conda environment (latest)
         - name: Provision conda env
           uses: conda-incubator/setup-miniconda@v2
           with:
@@ -88,4 +92,7 @@ jobs:
             NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
             NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
           timeout-minutes: 1
-
+        - name: Test notebooks (nbmake)
+          run: |
+            pip install nbmake
+            pytest --nbmake

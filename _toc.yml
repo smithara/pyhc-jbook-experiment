@@ -14,6 +14,9 @@ parts:
   - file: src/pyspedas_demo
   - file: src/coordinates_demo
   - file: src/pytplot_demo
+  - file: src/coordinate_systems
+  - file: src/retrieve_compress
+  - file: src/kamodo_pysat_demo
 - caption: Executable papers
   chapters:
   - file: src/PyHC_Science_Paper-AGU

@@ -2,6 +2,7 @@ name: pyhc-latest
 channels:
   - conda-forge
 dependencies:
+  - aiapy
   - astropy
   - bokeh
   - cartopy
@@ -27,6 +28,7 @@ dependencies:
     - hapiplot
     - kamodo
     - pysat
+    - pysatNASA
     - pyspedas
     - pytplot
     - spacepy

@@ -2,7 +2,6 @@ name: pyhc-latest
 channels:
   - conda-forge
 dependencies:
-  - aiapy
   - astropy
   - bokeh
   - cartopy
@@ -23,6 +22,7 @@ dependencies:
   - watermark
   - xarray
   - pip:
+    - aiapy
     - cdflib
     - hapiclient
     - hapiplot

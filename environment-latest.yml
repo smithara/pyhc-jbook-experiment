@@ -28,7 +28,6 @@ dependencies:
     - hapiplot
     - kamodo
     - pysat
-    - pysatNASA
     - pyspedas
     - pytplot
     - spacepy

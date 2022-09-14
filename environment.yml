@@ -28,6 +28,6 @@ dependencies:
     - hapiplot==0.2.*
     - kamodo==21.10.*
     - pysat==3.0.*
-    - pyspedas==1.2.*
+    - pyspedas==1.3.6
     - pytplot-mpl-temp==2.0.2
     - spacepy==0.2.*

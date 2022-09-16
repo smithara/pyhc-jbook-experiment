@@ -1,7 +1,7 @@
 # Book settings
 # Learn more at https://jupyterbook.org/customize/config.html
 
-title: PyHC Gallery (test)
+title: PyHC Gallery
 author: Python in Heliophysics Community
 logo: logo.png
 

@@ -13,7 +13,8 @@ parts:
   - file: src/units_demo
   - file: src/pyspedas_demo
   - file: src/coordinates_demo
-  - file: src/pytplot_demo
-- caption: Executable papers
+  - file: src/coordinate_systems
+  - file: src/retrieve_compress
+- caption: Other Package Demos
   chapters:
-  - file: src/PyHC_Science_Paper-AGU
+  - file: src/pytplot_demo

@@ -53,10 +53,18 @@ jobs:
           deploy-message: "Deploy from GitHub Actions"
           github-deployment-environment: netlify-deploy
           github-deployment-description: "jbook preview on netlify"
-          alias: preview-jbook
           enable-pull-request-comment: true
           enable-commit-comment: true
           overwrites-pull-request-comment: true
         env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+      # Experimental steps that could be run before jupyter-book
+      # Layer in pytest & nbmake (could be fragile)
+      - name: Install nbmake
+        run: |
+          pip install pytest pytest-xdist nbmake
+      # Execute notebooks with nbmake
+      - name: Execute notebooks with nbmake
+        run: |
+          pytest --numprocesses 2 --nbmake --overwrite src/*.ipynb

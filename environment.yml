@@ -22,11 +22,12 @@ dependencies:
   - watermark
   - xarray=0.20
   - pip:
+    - aiapy==0.6.4
     - cdflib==0.3.*
     - hapiclient==0.2.*
     - hapiplot==0.2.*
     - kamodo==21.10.*
     - pysat==3.0.*
     - pyspedas==1.2.*
-    - pytplot==1.7.*
+    - pytplot-mpl-temp==2.0.2
     - spacepy==0.2.*

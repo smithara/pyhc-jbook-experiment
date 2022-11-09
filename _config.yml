@@ -1,7 +1,7 @@
 # Book settings
 # Learn more at https://jupyterbook.org/customize/config.html
 
-title: PyHC Gallery (demo)
+title: PyHC Gallery
 author: Python in Heliophysics Community
 logo: logo.png
 
@@ -19,10 +19,11 @@ launch_buttons:
   colab_url: "https://colab.research.google.com"
 
 repository:
-  url: https://github.com/smithara/pyhc-jbook-experiment
-  branch: main
+  url: https://github.com/sapols/pyhc-jbook-experiment
+  branch: shawn-book-update
 
 html:
+  favicon: "src/img/favicon.png"
   use_issues_button: true
   use_repository_button: true
 

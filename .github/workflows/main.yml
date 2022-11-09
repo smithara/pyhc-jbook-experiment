@@ -38,8 +38,13 @@ jobs:
         run: |
           conda info
           conda list
-      # Build Jupyter Book site
+      # Execute notebooks with nbmake
+      - name: Execute notebooks with nbmake
+        run: |
+          pytest --numprocesses 2 --nbmake --overwrite src/*.ipynb
+      # Build Jupyter Book site from pre-executed notebooks
       - name: Run jupyter-book build
+        if: always()  # so that this runs even when pytest above reports failure
         run: |
           jupyter-book build .
       # Deploy online preview
@@ -59,12 +64,3 @@ jobs:
         env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
-      # Experimental steps that could be run before jupyter-book
-      # Layer in pytest & nbmake (could be fragile)
-      - name: Install nbmake
-        run: |
-          pip install pytest pytest-xdist nbmake
-      # Execute notebooks with nbmake
-      - name: Execute notebooks with nbmake
-        run: |
-          pytest --numprocesses 2 --nbmake --overwrite src/*.ipynb

@@ -6,7 +6,7 @@ author: Python in Heliophysics Community
 logo: logo.png
 
 execute:
-  execute_notebooks: cache
+  execute_notebooks: "off"
   run_in_temp: false
   timeout: 300
   allow_errors: true

@@ -9,6 +9,15 @@ on:
   workflow_dispatch:
 
 jobs:
+  pre-commit:
+    name: Format (pre-commit)
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1
+    - uses: actions/setup-python@v2
+    - uses: pre-commit/action@v3.0.0
+      with:
+        extra_args: --hook-stage manual --all-files
   build-book:
     runs-on: ubuntu-latest
     defaults:

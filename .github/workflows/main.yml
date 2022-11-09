@@ -13,8 +13,7 @@ jobs:
     name: Format (pre-commit)
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v1
-    - uses: actions/setup-python@v2
+    - uses: actions/checkout@v3
     - uses: pre-commit/action@v3.0.0
       with:
         extra_args: --hook-stage manual --all-files
@@ -26,7 +25,7 @@ jobs:
         shell: bash -l {0}
     steps:
       # Setup conda environment
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       - name: Provision conda env
         uses: conda-incubator/setup-miniconda@v2.1.1
         with:

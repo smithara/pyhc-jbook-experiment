@@ -23,4 +23,3 @@ mamba create --name pyhc --file pyhc-gallery-fixed-conda.txt
 mamba activate pyhc
 pip install pyhc-gallery-fixed-pip.txt
 ```
-

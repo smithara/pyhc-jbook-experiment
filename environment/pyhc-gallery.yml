@@ -2,9 +2,14 @@ name: pyhc-gallery
 channels:
   - conda-forge
 dependencies:
+  # Python
   - python=3.10
   - pip
+  # Testing and jupyter-book build
   - jupyter-book=0.13.1
+  - pytest
+  - pytest-xdist
+  - nbmake
   # Gallery dependencies:
   - aiapy
   - astropy
@@ -32,4 +37,5 @@ dependencies:
     - hapiplot
     - pyspedas==1.4.4
     - pytplot-mpl-temp  # from pyspedas; provides pytplot package!
+    - spacepy
     - viresclient  # (also from pyspedas, though it is not used by pyspedas!)

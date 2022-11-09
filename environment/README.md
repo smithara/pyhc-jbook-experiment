@@ -21,5 +21,5 @@ To create the exact environment (on linux) from the two .txt files:
 ```
 mamba create --name pyhc --file pyhc-gallery-fixed-conda.txt
 mamba activate pyhc
-pip install pyhc-gallery-fixed-pip.txt
+pip install -r pyhc-gallery-fixed-pip.txt
 ```

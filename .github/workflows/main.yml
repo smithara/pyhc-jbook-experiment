@@ -19,6 +19,7 @@ jobs:
       with:
         extra_args: --hook-stage manual --all-files
   build-book:
+    needs: pre-commit
     runs-on: ubuntu-latest
     defaults:
       run:

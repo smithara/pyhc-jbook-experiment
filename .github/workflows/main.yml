@@ -30,10 +30,10 @@ jobs:
         uses: conda-incubator/setup-miniconda@v2.1.1
         with:
           activate-environment: pyhc
-          environment-file: environment/pyhc-gallery-fixed-conda.txt
+          environment-file: binder/pyhc-gallery-fixed-conda.txt
       - name: Add pip packages
         run: |
-          pip install -r environment/pyhc-gallery-fixed-pip.txt
+          pip install -r binder/pyhc-gallery-fixed-pip.txt
       - name:  Display environment
         run: |
           conda info

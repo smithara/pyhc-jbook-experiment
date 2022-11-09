@@ -1,4 +1,4 @@
-name: pyhc-gallery
+name: pyhc
 channels:
   - conda-forge
 dependencies:

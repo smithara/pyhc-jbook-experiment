@@ -1,8 +1,8 @@
-`pyhc-gallery.yml` is used to generate a specific environment defined by `pyhc-gallery-fixed-conda.txt` and `pyhc-gallery-fixed-pip.txt`. `pyhc-gallery.yml` is manually written, getting as many as possible packages from conda-forge, then adding the remaining pip-only packages.
+`environment.yml` is used to generate a specific environment defined by `pyhc-gallery-fixed-conda.txt` and `pyhc-gallery-fixed-pip.txt` (which are used to build the jupyter-book). `environment.yml` is manually written, getting as many as possible packages from conda-forge, then adding the remaining pip-only packages.
 
 To attempt to create an environment (cross platform):
 ```
-mamba env create --name pyhc --file pyhc-gallery.yml
+mamba env create --name pyhc --file environment.yml
 mamba activate pyhc
 ```
 

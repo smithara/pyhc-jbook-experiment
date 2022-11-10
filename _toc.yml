@@ -2,11 +2,8 @@
 # Learn more at https://jupyterbook.org/customize/toc.html
 
 format: jb-book
-root: README
+root: src/welcome
 parts:
-- caption: Preamble
-  chapters:
-  - file: src/welcome
 - caption: Astropy, SunPy, SpacePy
   chapters:
   - file: src/planet_locations

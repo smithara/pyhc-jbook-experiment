@@ -13,7 +13,7 @@ dependencies:
   # Gallery dependencies:
   - aiapy
   - astropy
-  - cdflib=0.4.7  # 0.4.8 reports as v0.0.0
+  - cdflib
   - matplotlib
   - netcdf4
   - numpy
@@ -22,6 +22,7 @@ dependencies:
   - pywavelets  # from pyspedas
   - scipy
   - sunpy
+  - viresclient
   - watermark
   - xarray
   # misc dependencies from pip packages below
@@ -38,4 +39,3 @@ dependencies:
     - pyspedas==1.4.4
     - pytplot-mpl-temp  # from pyspedas; provides pytplot package!
     - spacepy
-    - viresclient  # (also from pyspedas, though it is not used by pyspedas!)

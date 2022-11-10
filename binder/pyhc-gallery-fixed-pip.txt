@@ -5,4 +5,3 @@ hapiplot==0.2.1
 pyspedas==1.4.4
 pytplot-mpl-temp==2.1.8
 spacepy==0.4.1
-viresclient==0.11.1

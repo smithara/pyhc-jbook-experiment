@@ -7,14 +7,12 @@ parts:
 - caption: Preamble
   chapters:
   - file: src/welcome
-- caption: Core Package Demos
+- caption: Astropy, SunPy, SpacePy
   chapters:
   - file: src/planet_locations
   - file: src/units_demo
-  - file: src/pyspedas_demo
   - file: src/coordinates_demo
   - file: src/coordinate_systems
-  - file: src/retrieve_compress
-- caption: Other Package Demos
+- caption: PySPEDAS, PyTplot
   chapters:
-  - file: src/pytplot_demo
+  - file: src/pyspedas_demo

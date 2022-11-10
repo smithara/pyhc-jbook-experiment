@@ -10,6 +10,9 @@ parts:
   - file: src/units_demo
   - file: src/coordinates_demo
   - file: src/coordinate_systems
+- caption: HAPI
+  chapters:
+  - file: src/hapi
 - caption: PySPEDAS, PyTplot
   chapters:
   - file: src/pyspedas_demo
